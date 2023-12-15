@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spock Rock | mlaskowski7</title>
+    <link rel="icon" type="image/png" href="img/PageIcon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e03b286a27.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="game-container">
+        <div class="header">
+            <h1>Rock Paper Scissors Lizard Spock</h1>
+        </div>
+
+        <div class="player-container" id="player">
+            <h2>Your Score: <span id="player-score">0</span><span class="choice" id="player-choice"></span></h2>
+            <i class="fa-solid fa-hand-rock" title="Rock" id="playerRock" onclick="select('rock')"></i>
+            <i class="fa-solid fa-hand-paper" title="Paper" id="playerPaper" onclick="select('paper')"></i>
+            <i class="fa-solid fa-hand-scissors" title="Scissors" id="playerScissors" onclick="select('scissors')"></i>
+            <i class="fa-solid fa-hand-lizard" title="Lizard" id="playerLizard" onclick="select('lizard')"></i>
+            <i class="fa-solid fa-hand-spock" title="Spock" id="playerSpock" onclick="select('spock')"></i>
+        </div>
+
+        <div class="player-container" id="computer">
+            <h2>Your Score: <span id="computer-score">0</span><span class="choice" id="computer-choice"></span></h2>
+            <i class="fa-solid fa-hand-rock" title="Rock" id="computerRock"></i>
+            <i class="fa-solid fa-hand-paper" title="Paper" id="computerPaper"></i>
+            <i class="fa-solid fa-hand-scissors" title="Scissors" id="computerScissors"></i>
+            <i class="fa-solid fa-hand-lizard" title="Lizard" id="computerLizard"></i>
+            <i class="fa-solid fa-hand-spock" title="Spock" id="computerSpock"></i>
+        </div>
+
+        <i class="fa-solid fa-arrows-rotate reset-icon" title="Reset" onclick="resetAll()"></i>
+
+        <div class="result-container">
+            <h3 class="result-text" id="result-text"></h3>
+        </div>
+        <div class="rules-button" id="rules-button">
+            Show Rules
+        </div>
+    </div>
+
+    <div class="rules-container hidden" id="rules-container">
+        PAPER: covers ROCK, disproves SPOCK | ROCK: crushes SCISSORS, crushes LIZARD | SCISSORS: cuts PAPER, decapitates LIZARD | LIZARD: eats PAPER, poisons SPOCK | SPOCK: smashes SCISSORS, vaporizes ROCK
+    </div>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
